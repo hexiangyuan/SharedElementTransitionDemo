@@ -34,12 +34,13 @@ public class FragmentA extends Fragment {
         getActivity().findViewById(R.id.btn_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentB simpleFragmentB = FragmentB.newInstance();
+                Fragment fragmentB = getFragmentManager().findFragmentByTag(TAG);
+                if (fragmentB == null) fragmentB = FragmentB.newInstance();
                 getFragmentManager()
                         .beginTransaction()
                         .addSharedElement(imageView,"simple transition name")
                         .addToBackStack(TAG)
-                        .replace(R.id.activity_main, simpleFragmentB)
+                        .replace(R.id.activity_main, fragmentB)
                         .commit();
             }
         });
