@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import io.github.hexiangyuan.sharedelementtransitionsdemo.R;
 
 /**
@@ -31,6 +33,11 @@ public class FragmentA extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final ImageView imageView = (ImageView) getView().findViewById(R.id.imageView);
+        Picasso.with(getActivity())
+                .load("https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg")
+                .fit()
+                .centerCrop()
+                .into(imageView);
         getActivity().findViewById(R.id.btn_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

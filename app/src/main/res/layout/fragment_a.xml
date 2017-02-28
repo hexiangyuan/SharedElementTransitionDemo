@@ -11,8 +11,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:scaleType="centerCrop"
-        android:transitionName="simple transition name"
-        android:src="@drawable/image" />
+        android:transitionName="simple transition name" />
 
     <Button
         android:id="@+id/btn_click"
