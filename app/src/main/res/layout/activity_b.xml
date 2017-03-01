@@ -4,14 +4,14 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.github.hexiangyuan.sharedelementtransitionsdemo.MainActivity">
+    tools:context="io.github.hexiangyuan.sharedelementtransitionsdemo.ActivityA">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="184dp"
         android:scaleType="centerCrop"
-        android:transitionName="simple transition name"
+        android:transitionName="@string/transitions_name"
         android:src="@drawable/image" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_below="@+id/imageView"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="hakjhfaklsgjakljfagasfasffffsewasfewafasfewafeafwfwafaksl;jfaksljfaklsjfalkfjaklsfjaslk"
+        android:text="这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容"
         android:textSize="16sp" />
 
 </RelativeLayout>

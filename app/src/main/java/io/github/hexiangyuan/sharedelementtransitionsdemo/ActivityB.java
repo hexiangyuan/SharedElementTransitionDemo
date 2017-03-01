@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  * Date  : 17-2-28
  */
 
-public class SimpleActivityB extends AppCompatActivity{
+public class ActivityB extends AppCompatActivity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

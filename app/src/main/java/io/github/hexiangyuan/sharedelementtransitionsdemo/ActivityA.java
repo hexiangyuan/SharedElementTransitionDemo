@@ -7,22 +7,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityA extends AppCompatActivity {
 
     private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.acitivit_a);
         imageView = (ImageView) findViewById(R.id.imageView);
     }
 
     public void imageClick(View v) {
-        Intent intent = new Intent(this, SimpleActivityB.class);
+        Intent intent = new Intent(this, ActivityB.class);
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 this, imageView,
-                "simple transition name"
+                getString(R.string.transitions_name)
         );
         startActivity(intent, optionsCompat.toBundle());
     }

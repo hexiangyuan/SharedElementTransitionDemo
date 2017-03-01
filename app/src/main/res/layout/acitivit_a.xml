@@ -8,14 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="io.github.hexiangyuan.sharedelementtransitionsdemo.MainActivity">
+    tools:context="io.github.hexiangyuan.sharedelementtransitionsdemo.ActivityA">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="148dp"
         android:layout_height="148dp"
         android:scaleType="centerCrop"
-        android:transitionName="simple transition name"
+        android:transitionName="@string/transitions_name"
         android:src="@drawable/image" />
 
     <Button
