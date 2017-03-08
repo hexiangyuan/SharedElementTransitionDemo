@@ -47,6 +47,7 @@ public class FragmentB extends Fragment {
         Picasso.with(getContext())
                 .load("https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg")
                 .fit().centerCrop()
+                .noFade()
                 .into(imageView, new Callback() {
                     @Override
                     public void onSuccess() {
