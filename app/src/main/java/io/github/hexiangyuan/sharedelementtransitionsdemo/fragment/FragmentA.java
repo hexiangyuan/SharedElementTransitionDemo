@@ -35,13 +35,15 @@ public class FragmentA extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment fragmentB = getFragmentManager().findFragmentByTag(TAG);
-                if (fragmentB == null) fragmentB = FragmentB.newInstance();
-                getFragmentManager()
-                        .beginTransaction()
-                        .addSharedElement(imageView,"simple transition name")
-                        .addToBackStack(TAG)
-                        .replace(R.id.activity_main, fragmentB)
-                        .commit();
+                if (fragmentB == null){
+                    fragmentB = FragmentB.newInstance();
+                    getFragmentManager()
+                            .beginTransaction()
+                            .addSharedElement(imageView,"simple transition name")
+                            .addToBackStack(TAG)
+                            .replace(R.id.activity_main, fragmentB)
+                            .commit();
+                }
             }
         });
     }

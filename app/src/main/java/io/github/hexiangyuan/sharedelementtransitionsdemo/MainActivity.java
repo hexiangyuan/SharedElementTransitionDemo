@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(FragmentA.class.getName());
         if (fragment == null) {
             fragment = FragmentA.newInstance();
+            getSupportFragmentManager().beginTransaction().add(R.id.activity_main,
+                    fragment,
+                    FragmentA.class.getName())
+                    .commit();
         }
-        getSupportFragmentManager().beginTransaction().add(R.id.activity_main,
-                fragment,
-                FragmentA.class.getName())
-                .commit();
     }
 }
